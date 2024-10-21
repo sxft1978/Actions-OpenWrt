@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v3.1.0
       - uses: dev-hato/github-actions-cache-cleaner@v0
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{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}}
