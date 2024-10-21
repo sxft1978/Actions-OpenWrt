@@ -68,8 +68,17 @@ jobs:
         temp-reserve-mb: 100
         root-reserve-mb: 1024
 
+        
+    - name: Free up disk space complete
+      run: |
+        echo "Free up disk space complete"
+        echo "=============================================================================="
+        df -hT
+        echo "=============================================================================="
+
     - name: Checkout
       uses: actions/checkout@main
+
 
 
    
