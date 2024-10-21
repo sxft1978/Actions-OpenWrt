@@ -1,3 +1,4 @@
+
 #
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
@@ -8,7 +9,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: space_display
+name: space
 
 on:
   repository_dispatch:
@@ -40,7 +41,8 @@ jobs:
            
     steps:
 
-     - name: Free up disk space complete
+    
+    - name: Free up disk space complete
       run: |
         echo "Free up disk space complete"
         echo "=============================================================================="
