@@ -1,0 +1,10 @@
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete Branch
+        uses: jessfraz/branch-cleanup-action@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NO_BRANCH_DELETED_EXIT_CODE: "0"
