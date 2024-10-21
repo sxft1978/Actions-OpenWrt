@@ -1,3 +1,9 @@
+name: Branch Cleanup
+
+on:
+  pull_request:
+    types: [closed]
+
 jobs:
   cleanup:
     runs-on: ubuntu-latest
@@ -6,5 +12,3 @@ jobs:
         uses: jessfraz/branch-cleanup-action@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          NO_BRANCH_DELETED_EXIT_CODE: "0"
