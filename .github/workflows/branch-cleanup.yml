@@ -1,14 +1,34 @@
-name: Branch Cleanup
+name: Auto-Clean
 
 on:
-  pull_request:
-    types: [closed]
+  #自动清理：每天早上4点
+  #schedule:
+   # - cron: 0 20 * * *
+  #手动清理
+  workflow_dispatch:
+    inputs:
+      NUMBER:
+        default: '0'
+        required: false
+        type: string
+
+env:
+  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+permissions: write-all
 
 jobs:
-  cleanup:
-    runs-on: ubuntu-latest
+  auto_clean:
+    runs-on: ubuntu-22.04
     steps:
-      - name: Delete Branch
-        uses: jessfraz/branch-cleanup-action@master
+      - name: Delete Old Releases
+        uses: dev-drprasad/delete-older-releases@master
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          keep_latest: ${{inputs.NUMBER || '0'}}
+          delete_tags: true
+
+      - name: Delete Old Workflows
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 0
+          keep_minimum_runs: 1
