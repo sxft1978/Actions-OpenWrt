@@ -1,5 +1,4 @@
-name: OpenWrt Builder
-
+name: space
 on:
   repository_dispatch:
   workflow_dispatch:
