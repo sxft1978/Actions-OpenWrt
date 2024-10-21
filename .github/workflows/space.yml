@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: space
+name: space_clear
 
 on:
   repository_dispatch:
