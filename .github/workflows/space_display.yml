@@ -9,7 +9,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: space
+name: space_display
 
 on:
   repository_dispatch:
