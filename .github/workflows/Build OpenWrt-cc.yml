@@ -56,7 +56,7 @@ jobs:
           MATRIXS: ${{ github.event.inputs.devices }}
         run: |
           if [ -z $MATRIXS ]; then
-            MATRIXS='["x86_64"]'
+            MATRIXS='["x86_64j"]'
           fi
           echo "matrix=$MATRIXS" >> $GITHUB_OUTPUT
     outputs:
