@@ -16,8 +16,8 @@ on:
   workflow_dispatch:
     inputs:
       devices:
-        description: '["x86_64","newifi-d2","cr660x","psg1218a"]'
-        default: '["x86_64"]'
+        description: '["x86_64j","x86_64f"]'
+        default: '["x86_64j"]'
       clean:
         description: 'clean ccache'
         default: 'false'
