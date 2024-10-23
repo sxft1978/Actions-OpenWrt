@@ -17,7 +17,7 @@ on:
     inputs:
       devices:
         description: '["x86_64j","x86_64f"]'
-        default: '["x86_64j"]'
+        default: '["x86_64f"]'
       clean:
         description: 'clean ccache'
         default: 'false'
